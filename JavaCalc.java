@@ -1,3 +1,6 @@
+Certainly! If you want to change the parameter signature to use a single array as input, you can modify the methods as follows:
+
+```java
 import java.util.Scanner;
 
 public class SimpleCalculator {
@@ -15,11 +18,13 @@ public class SimpleCalculator {
         System.out.print("Enter the second number: ");
         double num2 = scanner.nextDouble();
 
+        double[] numbers = {num1, num2};
+
         // Perform calculations using methods
-        double sumResult = add(num1, num2);
-        double differenceResult = subtract(num1, num2);
-        double productResult = multiply(num1, num2);
-        double quotientResult = divide(num1, num2);
+        double sumResult = add(numbers);
+        double differenceResult = subtract(numbers);
+        double productResult = multiply(numbers);
+        double quotientResult = divide(numbers);
 
         // Display results
         System.out.println("Sum: " + sumResult);
@@ -31,27 +36,30 @@ public class SimpleCalculator {
     }
 
     // Method to add two numbers
-    public static double add(double a, double b) {
-        return a + b;
+    public static double add(double[] numbers) {
+        return numbers[0] + numbers[1];
     }
 
     // Method to subtract two numbers
-    public static double subtract(double a, double b) {
-        return a - b;
+    public static double subtract(double[] numbers) {
+        return numbers[0] - numbers[1];
     }
 
     // Method to multiply two numbers
-    public static double multiply(double a, double b) {
-        return a * b;
+    public static double multiply(double[] numbers) {
+        return numbers[0] * numbers[1];
     }
 
     // Method to divide two numbers (checks for division by zero)
-    public static double divide(double a, double b) {
-        if (b != 0) {
-            return a / b;
+    public static double divide(double[] numbers) {
+        if (numbers[1] != 0) {
+            return numbers[0] / numbers[1];
         } else {
             System.out.println("Error: Cannot divide by zero.");
             return Double.NaN; // NaN (Not a Number) represents an undefined result
         }
     }
 }
+```
+
+In this modified version, each method now takes a single array `double[] numbers` as a parameter, containing the two numbers to be used in the calculation.
