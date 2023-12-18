@@ -1,6 +1,3 @@
-Certainly! If you want to change the parameter signature to use a single array as input, you can modify the methods as follows:
-
-```java
 import java.util.Scanner;
 
 public class SimpleCalculator {
@@ -60,6 +57,3 @@ public class SimpleCalculator {
         }
     }
 }
-```
-
-In this modified version, each method now takes a single array `double[] numbers` as a parameter, containing the two numbers to be used in the calculation.
