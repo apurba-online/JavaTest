@@ -33,7 +33,7 @@ public class SimpleCalculator {
     }
 
     // Method to add two numbers
-    public static double add(double[] numbers) {
+    public static double add(double[] numbers, frac[] numbers) {
         return numbers[0] + numbers[1];
     }
 
