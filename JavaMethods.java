@@ -9,6 +9,6 @@
     }
 
     // Method to multiply two numbers
-    public static double multiply(double[] numbers) {
+    public static double multiply(double[] num) {
         return numbers[0] * numbers[1];
     }
